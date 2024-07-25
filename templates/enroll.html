@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home
+        </title>
+    </head>
+    <body>
+        <h2>&emsp;&emsp;&emsp;&emsp;&emsp;Student Details</h2>
+        <table>
+            <tr>
+                <th>Roll Number</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            <tr>
+                <td>{{student.roll_number}}</td>
+                <td>{{student.first_name}}</td>
+                <td>{{student.last_name}}</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <h2>&emsp;&emsp;&emsp;&emsp;&emsp;Enrollment list</h2>
+        <table>
+            <tr>
+                <th>S.No.</th>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Course Description</th>
+            </tr>
+            {% for c in course %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{c.course_code}}</td>
+                    <td>{{c.course_name}}</td>
+                    <td>{{c.course_description}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        &emsp;&emsp;&emsp;&emsp;&emsp;<a href = "/">Go Back</a>
+    </body>
+</html>
